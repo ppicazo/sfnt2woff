@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8)
+
+set(CMAKE_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX})
+
+
+project("sfnt2woff")
+
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lz")
+
+add_executable(sfnt2woff sfnt2woff.c woff.c woff.h woff-private.h)
+add_executable(woff2sfnt woff2sfnt.c woff.c woff.h woff-private.h)
+
+install (TARGETS sfnt2woff woff2sfnt DESTINATION bin)

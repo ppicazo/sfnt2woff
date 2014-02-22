@@ -58,8 +58,9 @@ header h1 {
 }
 
 header h1:before {
-  content: "./ ";
+  content: "$ ";
   font-size: 24px;
+  padding-left: 12px;
 }
 
 header h2 {
